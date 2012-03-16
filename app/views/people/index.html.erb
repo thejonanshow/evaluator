@@ -24,3 +24,22 @@
 </table>
 
 <br />
+
+%h1 All Hungries
+
+%table
+  %tr
+    %th First name
+    %th Last name
+    %th GitHub handle
+    %th Email
+
+    - people.each do |person|
+      %td= person.first_name
+      %td= person.last_name
+      %td= person.github_handle
+      %td= person.email
+      %td= link_to 'Show', person
+      %td= link_to 'Edit', edit_person_path(person)
+
+%br/
