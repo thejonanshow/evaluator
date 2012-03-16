@@ -1,9 +1,33 @@
+html, head, body {
+  background: #fff url('content-bg.png') repeat top left; 
+  margin: 0 auto; 
+  width: 1000px; }
+
+body {
+  height: 100%; }
+
 div#banner { 
   margin: 0; 
-  padding: 55px 0; 
+  padding: 85px 0; 
   display: block; 
   text-indent: -9999px; 
-  background: transparent url('images/header-bg.png') no-repeat top center; }
+  background: transparent url('header-bg.png') no-repeat top center; }
+
+div#navigation {
+  padding-bottom: 25px; }
 
 div#navigation ul { 
   list-style-type: none; }
+
+div#navigation li { 
+  float: right;
+  padding-left: 20px;
+  padding-right: 20px; 
+  border-left: 1px solid #fff;
+  text-transform: uppercase; }
+
+div#navigation li:last-child {
+  border-left: none; }
+
+label {
+  color: #eee; }
