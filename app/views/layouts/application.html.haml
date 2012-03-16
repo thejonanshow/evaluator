@@ -6,17 +6,19 @@
     = stylesheet_link_tag    "stylesheets/bootstrap.min.css", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    .test-div
+      %h1 I'm here.
   %body
-  #navigation
-    %ul
-      - if signed_in?
-        - if Person.instructor?(current_user)
-          %li= link_to "Admin", admin_path
-        %li= link_to "Home", root_path
-        %li= link_to current_user.github_handle, edit_person_path(current_user)
-        %li= link_to "Sign out", signout_path
+    #navigation
+      %ul
+        - if signed_in?
+          - if Person.instructor?(current_user)
+            %li= link_to "Admin", admin_path
+          %li= link_to "Home", root_path
+          %li= link_to current_user.github_handle, edit_person_path(current_user)
+          %li= link_to "Sign out", signout_path
 
-  %p#notice= notice
+    %p#notice= notice
 
-  = yield
+    = yield
 
