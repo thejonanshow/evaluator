@@ -1,5 +1,5 @@
 module Evaluator
-  ADMINS = %w(jcasimir mattyoho)
+  ADMINS = %w(jcasimir mattyoho 1337807 eweng)
   PEOPLE = %w(mattyoho
             jcasimir
             marktabler
