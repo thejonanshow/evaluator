@@ -6,8 +6,11 @@
     = stylesheet_link_tag    "stylesheets/bootstrap.min.css", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-    .test-div
-      %h1 I'm here.
+    %div#banner.row-fluid
+      %div.span6
+        %h1 I'm here.
+      %div.span6
+        %h2 And I am not.
   %body
     #navigation
       %ul
