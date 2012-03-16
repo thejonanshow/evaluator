@@ -8,26 +8,46 @@ body {
 
 div#banner { 
   margin: 0; 
-  padding: 85px 0; 
+  padding: 0px 0px 50px; 
   display: block; 
   text-indent: -9999px; 
   background: transparent url('header-bg.png') no-repeat top center; }
 
-div#navigation {
+div.navigation-left {
   padding-bottom: 0px; }
 
-div#navigation ul { 
+div.navigation-right {
+  padding-bottom: 0px; }
+
+div.navigation-left ul { 
   list-style-type: none; }
 
-div#navigation li { 
+div.navigation-right ul { 
+  list-style-type: none; }
+
+div.navigation-left li { 
+  float: left; 
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase; 
+  border-right: 1px solid #fff; }
+
+div.navigation-right li { 
   float: right;
   padding-left: 20px;
   padding-right: 20px; 
-  border-left: 1px solid #fff;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  border-left: 1px solid #fff; }
 
-div#navigation li:last-child {
+div.navigation-left li:last-child {
+  border-right: none; }
+
+div.navigation-right li:last-child {
   border-left: none; }
 
 label {
   color: #eee; }
+
+a.banner {
+  display: block;
+  height: 155px; }

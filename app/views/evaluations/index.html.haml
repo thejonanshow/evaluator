@@ -11,7 +11,7 @@
         - unless resp.completed?
           = link_to "Edit", edit_evaluation_response_path(resp)
       - else
-        = form_for EvaluationResponse.new(evaluation: evaluation) do |form|
+        = form_for EvaluationResponse.new(evaluation: evaluation), :class => "form-inline" do |form|
           = form.hidden_field :evaluation_id
           = form.submit "Take Evaluation"
           - if evaluation.peer?
