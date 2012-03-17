@@ -7,9 +7,9 @@
           = "Ended #{time_ago_in_words(resp.completed_at)} ago"
         - elsif resp.submitted?
           = "Taken #{time_ago_in_words(resp.submitted_at)} ago"
-        = link_to "View", evaluation_response_path(resp)
+        = link_to "View", evaluation_response_path(resp), {:class => "btn btn-primary"}
         - unless resp.completed?
-          = link_to "Edit", edit_evaluation_response_path(resp)
+          = link_to "Edit", edit_evaluation_response_path(resp), {:class => "btn btn-primary"}
       - else
         = form_for EvaluationResponse.new(evaluation: evaluation), :html => {:class => "form-inline"} do |form|
           = form.hidden_field :evaluation_id
