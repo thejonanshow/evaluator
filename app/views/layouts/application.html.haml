@@ -12,18 +12,18 @@
       = link_to "Home", root_path, { :class => "banner" }
     .row-fluid
       .navigation-left.span6
-        %ul
+        %ul.unstyled
           %li= link_to "Home", root_path
-      .navigation-right.span6
-        %ul
+      .navigation-right.unstyled.span6
+        %ul.unstyled
           - if signed_in?
             %li= link_to "Sign out", signout_path
             - if Person.instructor?(current_user)
               %li= link_to "Admin", admin_path
             %li= link_to current_user.github_handle, edit_person_path(current_user)
     %hr/
-
-    %p#notice= notice
+    -unless notice.nil?
+      %p#notice= notice
 
     = yield
 

@@ -24,10 +24,7 @@ div.navigation-left {
 div.navigation-right {
   padding-bottom: 0px; }
 
-div.navigation-left ul { 
-  list-style-type: none; }
-
-div.navigation-right ul { 
+ul.unstyled { 
   list-style-type: none; }
 
 div.navigation-left li { 
@@ -50,6 +47,9 @@ div.navigation-left li:last-child {
 div.navigation-right li:last-child {
   border-left: none; }
 
+div.choice {
+  }
+
 label {
   color: #eee; }
 
@@ -58,7 +58,23 @@ a.banner {
   height: 155px; }
 
 .left {
-  float: left; }
+  float: left; 
+  display: block; }
 
 .right {
-  float: right; }
+  float: right;
+  display: block; }
+
+div.task {
+  padding: 15px;
+  background: #aaa; 
+  -moz-border-radius: 15px;
+  border-radius: 15px; 
+  color: #333; 
+  margin-left:0px;
+  font-size:15px;
+  vertical-align: middle;
+  margin-bottom: 10px; }
+
+div.task a.task {
+  margin-left:10px;  }
