@@ -6,4 +6,4 @@
 
 = form_for(evaluation_response) do |form|
   = render partial: evaluation.sections_in_order, locals: {form: form}
-  = form.submit "Submit Evaluation"
+  = form.submit "Submit Evaluation", {:class => "btn btn-primary"}

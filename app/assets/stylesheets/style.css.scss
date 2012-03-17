@@ -1,7 +1,12 @@
 html, head, body {
   background: #fff url('content-bg.png') repeat top left; 
   margin: 0 auto; 
-  width: 1000px; }
+  width: 940px; }
+
+div.section, div.questions{
+  background: #fff url('content-bg.png') repeat top left; 
+  margin: 0 auto; 
+  width: 940px; }
 
 body {
   height: 100%; }
@@ -51,3 +56,9 @@ label {
 a.banner {
   display: block;
   height: 155px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
