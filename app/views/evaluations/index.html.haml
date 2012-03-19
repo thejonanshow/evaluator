@@ -1,20 +1,19 @@
-%div.row.task
-  - evaluations.each do |evaluation|
-    %div.evaluation_row
-      %div.span7.evaluation_title
-        = evaluation.title
-      - if resp = current_user.response_for(evaluation)
-        - if resp.completed?
-          = "Ended #{time_ago_in_words(resp.completed_at)} ago"
-        - elsif resp.submitted?
-          = "Taken #{time_ago_in_words(resp.submitted_at)} ago"
-      %div.span2.offset2
-        = link_to "View", evaluation_response_path(resp), {:class => "btn btn-primary task"}
-        - unless resp.completed?
-          = link_to "Edit", edit_evaluation_response_path(resp), {:class => "btn btn-primary task"}
-        - else
-          = form_for EvaluationResponse.new(evaluation: evaluation), :html => {:class => "form-inline"} do |form|
-            = form.hidden_field :evaluation_id
-            = form.submit "Take Evaluation", {:class => "btn btn-primary right task"}
-            - if evaluation.peer?
-              = form.select :evaluatee_id, Person.student_handles_and_ids, {:class => "btn btn-primary"}
+- evaluations.each do |evaluation|
+  %div.evaluation_row
+    %div.span7.evaluation_title
+      = evaluation.title
+    - if resp = current_user.response_for(evaluation)
+      - if resp.completed?
+        = "Ended #{time_ago_in_words(resp.completed_at)} ago"
+      - elsif resp.submitted?
+        = "Taken #{time_ago_in_words(resp.submitted_at)} ago"
+    %div.span2.offset2
+      = link_to "View", evaluation_response_path(resp), {:class => "btn btn-primary task"}
+      - unless resp.completed?
+        = link_to "Edit", edit_evaluation_response_path(resp), {:class => "btn btn-primary task"}
+      - else
+        = form_for EvaluationResponse.new(evaluation: evaluation), :html => {:class => "form-inline"} do |form|
+          = form.hidden_field :evaluation_id
+          = form.submit "Take Evaluation", {:class => "btn btn-primary right task"}
+          - if evaluation.peer?
+            = form.select :evaluatee_id, Person.student_handles_and_ids, {:class => "btn btn-primary"}
