@@ -1,3 +1,21 @@
 // Place all the styles related to the responses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.questions label {
+  display:inline;
+}
+
+h4.question_text {
+  color:#bdd8e7;
+  margin:0px 0px 20px 4px;
+}
+
+div.questions div input[type="text"],
+div.questions div textarea {
+  margin-top:7px;
+}
+
+input#evaluation_submit {
+  margin:18px 9px;
+}
